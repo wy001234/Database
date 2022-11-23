@@ -1,0 +1,55 @@
+-- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
+--
+-- Host: localhost    Database: java1_bank
+-- ------------------------------------------------------
+-- Server version	8.0.30
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `bank_account`
+--
+
+DROP TABLE IF EXISTS `bank_account`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `bank_account` (
+  `a_no` varchar(11) NOT NULL,
+  `a_item_dist` varchar(2) NOT NULL,
+  `a_item_name` varchar(20) NOT NULL,
+  `a_c_no` varchar(14) NOT NULL,
+  `a_balance` int NOT NULL,
+  `a_open_date` datetime NOT NULL,
+  PRIMARY KEY (`a_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `bank_account`
+--
+
+LOCK TABLES `bank_account` WRITE;
+/*!40000 ALTER TABLE `bank_account` DISABLE KEYS */;
+INSERT INTO `bank_account` VALUES ('101-11-1001','S1','자유저축예금','730423-1000001',380000,'2005-07-21 00:00:00'),('101-11-1003','S1','자유저축예금','870830-1000004',53000,'2007-02-17 00:00:00'),('101-11-2001','S1','자유저축예금','220-82-52237',23000000,'2003-04-14 00:00:00'),('101-11-2002','S1','자유저축예금','361-22-42687',4201000,'2008-12-30 00:00:00'),('101-11-2003','S1','자유저축예금','102-22-51094',8325010,'2010-06-07 00:00:00'),('101-12-1002','S2','정기적립예금','830513-2000005',1200500,'2009-05-13 00:00:00'),('101-13-1005','S3','주택청약예금','941127-1000006',720800,'2012-10-15 00:00:00'),('101-21-1004','L1','고객신용대출','910912-2000005',1200500,'2009-08-25 00:00:00'),('101-22-1006','L2','예금담보대출','730423-1000001',55000,'2013-12-11 00:00:00'),('101-23-1007','L3','주택담보대출','750210-1000002',2700000,'2020-09-23 00:00:00');
+/*!40000 ALTER TABLE `bank_account` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-11-23 13:36:12
